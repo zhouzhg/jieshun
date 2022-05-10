@@ -5,5 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: copy file
-        run: echo The username is ${{ inputs.username }}
-        run: touch a.txt 
+        run: | 
+         echo The username is ${{ inputs.username }}
+         touch a.txt 
