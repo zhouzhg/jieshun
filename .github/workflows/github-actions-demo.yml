@@ -6,3 +6,4 @@ jobs:
     steps:
       - name: copy file
         run: echo The username is ${{ inputs.username }}
+        run: touch a.txt 
