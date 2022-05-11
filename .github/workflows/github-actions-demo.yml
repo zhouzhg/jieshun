@@ -7,5 +7,6 @@ jobs:
       - name: copy file
         shell: bash
         run: | 
-          echo The username is ${{ inputs.username }}
-          touch a.txt 
+          # echo The username is ${{ inputs.username }}
+          echo The PR was merged
+          echo `pwd`
