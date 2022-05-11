@@ -10,3 +10,4 @@ jobs:
           # echo The username is ${{ inputs.username }}
           echo The PR was merged
           echo `pwd`
+          ls -l
