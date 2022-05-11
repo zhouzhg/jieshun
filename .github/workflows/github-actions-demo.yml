@@ -8,6 +8,7 @@ jobs:
         shell: bash
         run: | 
           # echo The username is ${{ inputs.username }}
+          echo "======${{ github.workspace }}======"
           echo The PR was merged
           echo `pwd`
           touch a.txt && echo "11111111112222222" >> a.txt
