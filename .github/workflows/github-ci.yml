@@ -21,6 +21,8 @@ jobs:
         run: echo 'Hi ${{ env.mascot }} -- ${{ env.super_duper_var }}'
   windows_job:
     runs-on: windows-latest
+    env:
+      mascot: github
     steps:
       - name: print in windows env
         run: echo 'Hi ${{ env.mascot }} -- ${{ env.super_duper_var }}'
