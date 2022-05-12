@@ -24,4 +24,8 @@ jobs:
     steps:
       - name: print in windows env
         run: echo 'Hi ${{ env.mascot }} -- ${{ env.super_duper_var }}'
+      - name: redefine env
+        run: echo 'Hi ${{ env.mascot }} -- ${{ env.super_duper_var }}'
+        env:
+          mascot: zhouzg
 
