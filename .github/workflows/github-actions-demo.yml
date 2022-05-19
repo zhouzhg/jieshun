@@ -15,6 +15,7 @@ jobs:
           git clone https://github.com/zhouzhg/jieshun.git
           ls -l
           echo ${{ env.pj_name }}
+          echo "--------判断脚本是否存在----------"
           [ -f ${{ env.pj_name }}/blocklist.sh ] && echo true || echo false
           echo "--------执行脚本----------"
           sh ${{ env.pj_name }}/blocklist.sh
