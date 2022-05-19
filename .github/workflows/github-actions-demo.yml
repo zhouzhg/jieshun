@@ -11,14 +11,13 @@ jobs:
         run: | 
           # echo The username is ${{ inputs.username }}
           echo "======${{ github.workspace }}======"
-          echo The PR was merged
           echo "------当前目录：`pwd`"
           git clone https://github.com/zhouzhg/jieshun.git
           ls -l
           echo ${{ env.pj_name }}
           [ -f ${{ env.pj_name }}/blocklist.sh ] && echo true || echo false
-          echo "执行脚本"
+          echo "--------执行脚本----------"
           sh ${{ env.pj_name }}/blocklist.sh
-          echo "打印项目信息"
+          echo "----------打印项目信息----------"
           ls  ${{ env.pj_name }} -l
           # curl www.baidu.com
