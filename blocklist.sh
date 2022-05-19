@@ -3,7 +3,7 @@ funcurl=https://devsl-api.bitkinetic.com/api/v2/block/up
 # config=/root/scripts/config.json
 config= ${{ env.pj_name }}/config.json
 
-cat $config
+# cat $config
 # curl -k -H "Content-Type:application/json;charset=utf-8" $funcurl -X POST -d "${namejson}" >> nameOutput.txt
 
 
