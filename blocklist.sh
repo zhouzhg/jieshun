@@ -14,6 +14,7 @@ XXamCxn8IGZuTDyM4ZLzKmlLNlPpI_aZ4gacBf8QSi35ggon2nCJh8hlF25Clv6lVf3SBRDBlotWHvIz
         "fuzzylist": `cat $config|jq '.fuzzylist'`,
         "whitelist": `cat $config|jq '.whitelist'`
 }"
+[ $? eq 0 ] && echo success || echo false
 #-d `cat ${config}`
 #-d '{
 #    "version": 1,
