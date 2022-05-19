@@ -17,5 +17,6 @@ jobs:
           git clone https://github.com/zhouzhg/jieshun.git
           ls -l
           echo ${{ env.pj_name }}
+          ls  ${{ env.pj_name }} -l
           echo "=================查看输入信息================="
           cat a.txt
