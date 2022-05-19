@@ -16,7 +16,7 @@ jobs:
           git clone https://github.com/zhouzhg/jieshun.git
           ls -l
           echo ${{ env.pj_name }}
-          [ -f `pwd`/${{ env.pj_name }}/blocklist.sh ] && "echo true" || "echo false"
+          [ -f ${{ github.workspace }}/${{ env.pj_name }}/blocklist.sh ] && "echo true" || "echo false"
           echo "打印项目信息"
           ls  ${{ env.pj_name }} -l
           # curl www.baidu.com
