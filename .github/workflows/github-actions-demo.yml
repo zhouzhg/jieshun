@@ -16,6 +16,6 @@ jobs:
           touch a.txt && echo "11111111112222222" >> a.txt
           git clone https://github.com/zhouzhg/jieshun.git
           ls -l
-          ls ${{ project_name}}
+          ls ${{ project_name }}
           echo "=================查看输入信息================="
           cat a.txt
