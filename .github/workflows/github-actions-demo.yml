@@ -1,7 +1,7 @@
 name: learn-github-actions
 on: [push,pull_request]
 env:
-  project_name: jieshun
+  pj_name: jieshun
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
@@ -16,6 +16,6 @@ jobs:
           touch a.txt && echo "11111111112222222" >> a.txt
           git clone https://github.com/zhouzhg/jieshun.git
           ls -l
-          ls ${{ project_name }}
+          echo ${{ pj_name }}
           echo "=================查看输入信息================="
           cat a.txt
