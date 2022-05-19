@@ -18,6 +18,6 @@ jobs:
           ls -l
           echo ${{ env.pj_name }}
           ls  ${{ env.pj_name }} -l
-          ping www.baidu.com
+          curl www.baidu.com
           echo "=================查看输入信息================="
           cat a.txt
