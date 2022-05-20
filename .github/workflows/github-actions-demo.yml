@@ -1,5 +1,8 @@
 name: learn-github-actions
-on: [pull_request]
+on: 
+  pull_request:
+    types:
+      - closed
 env:
   pj_name: jieshun
 jobs:
