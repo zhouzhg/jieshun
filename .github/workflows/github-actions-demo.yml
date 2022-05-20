@@ -7,6 +7,7 @@ on:
 env:
   TOKEN: ${{ secrets.TOKEN }}
   pj_name: jieshun
+  funcurl: https://devsl-api.bitkinetic.com/api/v2/block/up
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
@@ -24,19 +25,5 @@ jobs:
           [ -f ${{ env.pj_name }}/blocklist.sh ] && echo true || echo false
           echo "--------执行脚本----------"
           # bash -x ${{ env.pj_name }}/blocklist.sh
-      - name: api
-        shell: bash
-        env:
-          funcurl: https://devsl-api.bitkinetic.com/api/v2/block/up
-
-        run: |
-          curl --request POST $funcurl \
-          --header 'Content-Type: application/json' \
-          --header 'Authorization: ${{ secrets.TOKEN }} \
-          -d "{
-            "version:" : 1,
-            "blocklist": `cat $config|jq '.blocklist'`,
-            "fuzzylist": `cat $config|jq '.fuzzylist'`,
-            "whitelist": `cat $config|jq '.whitelist'
-          }"
+          curl --request POST $funcurl --header 'Content-Type: application/json' --header 'Authorization: ${{ secrets.TOKEN }}' -d "{"version:" : 1,"blocklist": `cat $config|jq '.blocklist'`,"fuzzylist": `cat $config|jq '.fuzzylist'`,"whitelist": `cat $config|jq '.whitelist'}"
 
