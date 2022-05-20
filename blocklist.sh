@@ -7,14 +7,14 @@ config=./jieshun/config.json
 
 curl --request POST $funcurl \
 --header 'Content-Type: application/json' \
---header 'Authorization: eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIn0.UcDWhnTaYEj-uH-RztubWYxHijMup9OuvvwsgsMnak-4dPI8-AqtXlJd0NGsX3n-7qNVGbZXIYNRttyoUiARacYRButSsAvS3FZhgk7cUe2PLYIQQLf9gdxGcIdv5aNAPCxZi
-XXamCxn8IGZuTDyM4ZLzKmlLNlPpI_aZ4gacBf8QSi35ggon2nCJh8hlF25Clv6lVf3SBRDBlotWHvIzHpwQugVms78zizhDLsii961cKUg-Ax4WlYzwDG-Iyj7h4bRmzGVvJULyUsoFDjlvmDN_IbIJigDtj9oQoQ936lBrEjKHSMJVc2c9B2LjHcwLTFGk9GbTtHdlJ09s8RKAQ.Txi3Z0nLARHT0lwX.BLfpL2WYWbMRAki7PHJcN9f50s-U_NKvQGsOh1kSWQ6KnviXEwY40qMQaa8bLxeOehhXza1VZrDpBcnq5ML2GTYa5-o7R4A.Ly_sRZ9L9Pdooi8wwv2acg' \-d "{
+--header 'Authorization: eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIn0.YCmty5QJ4ILqoU7a6XG43jg3zQW3R7h3tRYYWGgo0NC_8FGj9_lPiADNLDtT9-RIVF3aB0cnXNLCTtP95kjHyMcyRTVfKsBBAFVtff3Zqu0Ms_dBLU9C3xWGacjVSQh4UbeUnEKAZtbIT6nxvI0OmFqM5jo9MlksblTZ37TcZjjS_7MRjzjOSpj4Cs7Vcdzb_IYwlMjlCZgK0w8t0ui2ehZo1hcUjiuCkUNjP2t581jKhB-s7oHGKYiki0N8H97FpILGQFVTlW27iC6O0xgOI-LmK541NYwU5FpPOeC-VrJ-ZbzvAjhiyh68oWUZWMZYEo0i5xLoiPd5TCz-SF3WBw.UfrsDvTagiyHV2ho.SeXKvXIvgzAP5YudmfW_glsq6ZD3yYgfDsbW_GqAgQmyjAJ38axhkQ_LUzTe-XdJbFplf9v8hKcA09eW76Oh263cSf8Vwx08zUKQ.6J-PLv4LNCPaiesqWRoD5Q' \
+-d "{
         "version:" : `cat $config|jq '.version'`,
         "blocklist": `cat $config|jq '.blocklist'`,
         "fuzzylist": `cat $config|jq '.fuzzylist'`,
         "whitelist": `cat $config|jq '.whitelist'`
 }"
-[ $? eq 0 ] && echo success || echo false
+[ $? -eq 0 ] && echo success || echo false
 #-d `cat ${config}`
 #-d '{
 #    "version": 1,
