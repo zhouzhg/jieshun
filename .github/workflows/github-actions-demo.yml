@@ -5,6 +5,7 @@ on:
     types:
       - closed
 env:
+  TOKEN: ${{ secrets.TOKEN }}
   pj_name: jieshun
 jobs:
   check-bats-version:
