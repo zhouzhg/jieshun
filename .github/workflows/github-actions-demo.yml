@@ -1,5 +1,6 @@
 name: learn-github-actions
-on: 
+on:
+  push:
   pull_request:
     types:
       - closed
