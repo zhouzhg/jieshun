@@ -1,5 +1,7 @@
 name: learn-github-actions
 on: [pull_request]
+env:
+  pj_name: jieshun
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
