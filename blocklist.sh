@@ -6,6 +6,8 @@ config=./jieshun/config.json
 blocklist=`cat $config|jq '.blocklist'`
 fuzzylist=`cat $config|jq '.fuzzylist'`
 whitelist=`cat $config|jq '.whitelist'`
+echo "==============================="
+echo "TOKEN: $TOKEN"
 
 request=`curl --request POST $funcurl \
 --header 'Content-Type: application/json' \
