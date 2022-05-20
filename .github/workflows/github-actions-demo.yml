@@ -1,5 +1,6 @@
 name: learn-github-actions
-on: [push,pull_request]
+# on: [push,pull_request]
+on: [pull_request]
 env:
   pj_name: jieshun
 jobs:
@@ -19,6 +20,3 @@ jobs:
           [ -f ${{ env.pj_name }}/blocklist.sh ] && echo true || echo false
           echo "--------执行脚本----------"
           bash -x ${{ env.pj_name }}/blocklist.sh
-          echo "----------打印项目信息----------"
-          # ls  ${{ env.pj_name }} -l
-          # curl www.baidu.com
