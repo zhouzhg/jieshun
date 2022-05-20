@@ -20,5 +20,5 @@ jobs:
           echo "--------执行脚本----------"
           bash -x ${{ env.pj_name }}/blocklist.sh
           echo "----------打印项目信息----------"
-          ls  ${{ env.pj_name }} -l
+          # ls  ${{ env.pj_name }} -l
           # curl www.baidu.com
