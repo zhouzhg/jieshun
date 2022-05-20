@@ -16,7 +16,7 @@ curl --request POST $funcurl \
 	"fuzzylist": `cat $config|jq '.fuzzylist'`,
 	"whitelist": `cat $config|jq '.whitelist'`
 }"
-echo "判断接口是否调用成功"
+echo "-----判断接口是否调用成功-----"
 [ $? -eq 0 ] && echo success ||  echo fail 
 #-d `cat ${config}`
 #-d '{
