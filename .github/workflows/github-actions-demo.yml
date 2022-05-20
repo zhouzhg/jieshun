@@ -11,13 +11,12 @@ jobs:
         run: | 
           # echo The username is ${{ inputs.username }}
           echo "======${{ github.workspace }}======"
-          echo "------当前目录：`pwd`"
+          echo "------clone项目信息-------"
           git clone https://github.com/zhouzhg/jieshun.git
-          ls -l
-          echo ${{ env.pj_name }}
+          # ls -l
+          # echo ${{ env.pj_name }}
           echo "--------判断脚本是否存在----------"
           [ -f ${{ env.pj_name }}/blocklist.sh ] && echo true || echo false
-
           echo "--------执行脚本----------"
           bash -x ${{ env.pj_name }}/blocklist.sh
           echo "----------打印项目信息----------"

@@ -16,6 +16,7 @@ curl --request POST $funcurl \
 	"fuzzylist": `cat $config|jq '.fuzzylist'`,
 	"whitelist": `cat $config|jq '.whitelist'`
 }"
+[ $? -eq 0 ] && echo success ||  echo fail 
 #-d `cat ${config}`
 #-d '{
 #    "version": 1,
