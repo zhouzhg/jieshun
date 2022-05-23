@@ -10,6 +10,7 @@ env:
   funcurl: https://devsl-api.bitkinetic.com/api/v2/block/up
 jobs:
   update-blocklist:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: update blocklist
