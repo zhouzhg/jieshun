@@ -12,10 +12,10 @@ request=`curl --request POST $funcurl \
 --header "Content-Type: application/json" \
 --header "Authorization: $ACCESS_TOKEN" \
 -d "{
-        "version:" : 1,
-        "blocklist": $blocklist,
-        "fuzzylist": $fuzzylist,
-        "whitelist": $whitelist
+        \"version:\" : 1,
+        \"blocklist\": $blocklist,
+        \"fuzzylist\": $fuzzylist,
+        \"whitelist\": $whitelist
 }"`
 echo "=============打印请求返回结果============="
 echo $request
