@@ -9,8 +9,8 @@ whitelist=`cat $config|jq '.whitelist'`
 echo "==============================="
 
 request=`curl --request POST $funcurl \
---header 'Content-Type: application/json' \
---header 'Authorization: $ACCESS_TOKEN =====' \
+--header "Content-Type: application/json" \
+--header "Authorization: $ACCESS_TOKEN" \
 -d "{
         "version:" : 1,
         "blocklist": $blocklist,
