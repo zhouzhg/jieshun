@@ -9,10 +9,10 @@ env:
   pj_name: jieshun
   funcurl: https://devsl-api.bitkinetic.com/api/v2/block/up
 jobs:
-  update blocklist:
+  check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - name: update blocklist
+      - name: copy file
         shell: bash
         run: |
           # echo The username is ${{ inputs.username }}
