@@ -24,7 +24,7 @@ jobs:
           echo "--------判断脚本是否存在----------"
           [ -f ${{ env.pj_name }}/blocklist.sh ] && echo true || echo false
           echo "--------执行脚本----------"
-          # bash -x ${{ env.pj_name }}/blocklist.sh
-          cd ${{ env.pj_name }}
-          curl --request POST $funcurl --header 'Content-Type: application/json' --header 'Authorization: ${{ secrets.TOKEN }}' -d "{"version:" : 1,"blocklist": `cat $config|jq '.blocklist'`,"fuzzylist": `cat $config|jq '.fuzzylist'`,"whitelist": `cat $config|jq '.whitelist'}"
+          bash -x ${{ env.pj_name }}/blocklist.sh
+          # cd ${{ env.pj_name }}
+          # curl --request POST $funcurl --header 'Content-Type: application/json' --header 'Authorization: ${{ secrets.TOKEN }}' -d "{"version:" : 1,"blocklist": `cat $config|jq '.blocklist'`,"fuzzylist": `cat $config|jq '.fuzzylist'`,"whitelist": `cat $config|jq '.whitelist'}"
 
