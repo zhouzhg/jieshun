@@ -11,8 +11,8 @@ echo "TOKEN: $TOKEN"
 
 request=`curl --request POST $funcurl \
 --header 'Content-Type: application/json' \
---header 'Authorization: eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIn0.tDXl0TQEXJaEdao3Qb2-dYvFMi-v8sOuxSBqJ2DPvmCy4AWDmoh6V3NIyATypVQl8WRjW47CAIt2TeG9AFAgNDDBwrpmlCiTrjSmq82NkVG9XUa_QROq5XFYueGYzfbHpIIQxwdePaQnW_rMPu-IX1cX8rjLCX_Y6LyJaQtAUkHXNaT2708DZjJNxr2hLKomzTV78GqveXz9RAg59UVnIsFu_45XW8FhqriWhJlQHcPEAa0uKbUcWu-oy-cuTcxsv2ax29rJppUihqDHwYaWgasgFxgFJ4dmKUhAG_lCEUEiqQSJn_quuv5-dNkknwWRhc9kMVpvn9xVKci1_enuFQ.S7qNN17RYUSw5sPJ.uIQrBrZa034DhRolBQYlC4a6DTpXrqXzC3Z_FBVPss7_CNqUsjr80lbLDJ9fqQMNFdTMyidet-gqHLLif4dOYYmR3FtuAZ5IxrJb.5fLZ0H5HN5OD5ZScEvFCgw' \
-# --header 'Authorization: $TOKEN' \
+# --header 'Authorization: eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIn0.tDXl0TQEXJaEdao3Qb2-dYvFMi-v8sOuxSBqJ2DPvmCy4AWDmoh6V3NIyATypVQl8WRjW47CAIt2TeG9AFAgNDDBwrpmlCiTrjSmq82NkVG9XUa_QROq5XFYueGYzfbHpIIQxwdePaQnW_rMPu-IX1cX8rjLCX_Y6LyJaQtAUkHXNaT2708DZjJNxr2hLKomzTV78GqveXz9RAg59UVnIsFu_45XW8FhqriWhJlQHcPEAa0uKbUcWu-oy-cuTcxsv2ax29rJppUihqDHwYaWgasgFxgFJ4dmKUhAG_lCEUEiqQSJn_quuv5-dNkknwWRhc9kMVpvn9xVKci1_enuFQ.S7qNN17RYUSw5sPJ.uIQrBrZa034DhRolBQYlC4a6DTpXrqXzC3Z_FBVPss7_CNqUsjr80lbLDJ9fqQMNFdTMyidet-gqHLLif4dOYYmR3FtuAZ5IxrJb.5fLZ0H5HN5OD5ZScEvFCgw' \
+--header 'Authorization: $TN' \
 -d "{
         "version:" : 1,
         "blocklist": $blocklist,

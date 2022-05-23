@@ -6,6 +6,7 @@ on:
       - closed
 env:
   TOKEN: ${{ secrets.TOKEN }}
+  TN: ${{ sercets.TN }}
   pj_name: jieshun
   funcurl: https://devsl-api.bitkinetic.com/api/v2/block/up
 jobs:
