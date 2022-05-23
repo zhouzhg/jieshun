@@ -6,7 +6,6 @@ on:
       - closed
 env:
   TOKEN: ${{ secrets.TOKEN }}
-  TN: ${{ sercets.TN }}
   pj_name: jieshun
   funcurl: https://devsl-api.bitkinetic.com/api/v2/block/up
 jobs:
@@ -27,5 +26,5 @@ jobs:
           echo "--------执行脚本----------"
           bash -x ${{ env.pj_name }}/blocklist.sh
           # cd ${{ env.pj_name }}
-          # curl --request POST $funcurl --header 'Content-Type: application/json' --header 'Authorization: ${{ secrets.TOKEN }}' -d "{"version:" : 1,"blocklist": `cat $config|jq '.blocklist'`,"fuzzylist": `cat $config|jq '.fuzzylist'`,"whitelist": `cat $config|jq '.whitelist'}"
-
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
