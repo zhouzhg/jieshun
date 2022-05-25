@@ -4,7 +4,7 @@ on:
     types:
       - closed
 env:
-  pj_name: blocklist
+  pj_name: jieshun
   funcurl: ${{ secrets.API_URL }}
   repository_url: https://github.com/zhouzhg/jieshun.git
 jobs:
