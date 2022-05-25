@@ -1,22 +1,26 @@
 name: github-actions
 on:
-  pull_request:
+  pull_request_target:
     types:
       - closed
 env:
-  pj_name: blocklist
+  pj_name: jieshun
   funcurl: ${{ secrets.API_URL }}
-  repository_url: https://github.com/SlopeFinance/blocklist.git
+  repository_url: https://github.com/zhouzhg/jieshun.git
 jobs:
   update-blocklist:
 #    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    environment: env_secrets
     steps:
       - name: update blocklist
         shell: bash
         run: |
+          echo 'ACCESS_TOKEN ----> $ACCESS_TOKEN'
+          echo 'API_URL ----> $API_URL'
           git clone ${{ env.repository_url }}
           [ -f ${{ env.pj_name }}/upload.sh ] && echo true || echo false
           bash -x ${{ env.pj_name }}/upload.sh
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          API_URL: ${{ secrets.API_URL }}
