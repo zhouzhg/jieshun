@@ -1,7 +1,6 @@
 name: github-actions
 on:
-  # pull_request:
-    pull_request_target:
+  pull_request_target:
     types:
       - closed
 env:
