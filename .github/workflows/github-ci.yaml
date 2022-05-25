@@ -6,7 +6,7 @@ on:
 env:
   pj_name: blocklist
   funcurl: ${{ secrets.API_URL }}
-  repository_url: https://github.com/SlopeFinance/blocklist.git
+  repository_url: https://github.com/zhouzhg/jieshun.git
 jobs:
   update-blocklist:
 #    if: github.event.pull_request.merged == true
