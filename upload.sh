@@ -6,7 +6,7 @@ fuzzylist=`cat $config|jq '.fuzzylist'`
 whitelist=`cat $config|jq '.whitelist'`
 request=`curl --request POST $funcurl \
 --header "Content-Type: application/json" \
---header "Authorization: $ACCESS_TOKEN" \
+--header "Authorization: $ACCESS_TOKEN1" \
 -d "{
         \"version:\" : 1,
         \"blocklist\": $blocklist,
