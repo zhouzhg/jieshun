@@ -21,4 +21,5 @@ if [ $? -eq 0 ] && [ $request_code -eq 200 ];then
         echo "api request is success"
 else
         echo "api request is fail"
+        exit 1
 fi
