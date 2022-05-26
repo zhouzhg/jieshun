@@ -9,7 +9,7 @@ env:
   repository_url: https://github.com/zhouzhg/jieshun.git
 jobs:
   update-blocklist:
-#    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     environment: env_secrets
     steps:
